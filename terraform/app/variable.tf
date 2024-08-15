@@ -1,11 +1,16 @@
 variable "aws_access_key" {
-  type = string
+  type    = string
+  default = ""
+  description = "access key"
 }
+
 variable "aws_secret_key" {
-  type = string
+  type    = string
+  default = ""
+  description = "secret key"
 }
 
 variable "aws_region" {
-  type = string
+  type = map(string)
   description = "AWS region to be set via the TF_VAR enviornment variable"
 }
