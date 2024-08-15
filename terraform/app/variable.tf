@@ -1,10 +1,10 @@
 variable "aws_access_key" {
-  type    = map(string)
+  type    = string
   description = "access key"
 }
 
 variable "aws_secret_key" {
-  type    = map(string)
+  type    = string
   description = "secret key"
 }
 
