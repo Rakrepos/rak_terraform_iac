@@ -1,9 +1,9 @@
-variable "aws_access_key" {
+variable "access_key" {
   type    = string
   description = "access key"
 }
 
-variable "aws_secret_key" {
+variable "secret_key" {
   type    = string
   description = "secret key"
 }

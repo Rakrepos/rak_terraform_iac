@@ -1,8 +1,8 @@
 output "accesskey_value" {
- value = var.aws_access_key
+ value = var.access_key
  sensitive = true
 }
 output "secret_value" {
- value = var.aws_secret_key
+ value = var.secret_key
  sensitive = true
 }
