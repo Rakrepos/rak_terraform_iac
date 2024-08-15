@@ -19,9 +19,11 @@ variable "aws_region" {
 }
 
 variable "aws_access_key" {
-  type = number
+  type = map(number)
+  default = ""
 }
 
 variable "aws_secret_key" {
-  type = number
+  type = map(number)
+  default = ""
 }
