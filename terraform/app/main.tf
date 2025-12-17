@@ -8,3 +8,22 @@ terraform {
     }
   }
 }
+
+###VPC AND SUBNETS MODULES##
+
+# provider "aws" {
+#   region = var.region
+# }
+
+module "vpc" {
+  source   = "./modules/vpc"
+  vpc_cidr = var.vpc_cidr
+}
+
+module "subnet" {
+  source        = "./modules/subnet"
+  vpc_id        = module.vpc.vpc_id
+  igw_id        = module.vpc.igw_id
+  subnet_cidrs  = var.public_subnets
+  azs           = var.azs
+}
