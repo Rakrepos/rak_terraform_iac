@@ -23,6 +23,7 @@ module "vpc" {
 module "subnet" {
   source        = "./modules/subnet"
   vpc_id        = module.vpc.vpc_id
-  public_cidrs  = var.public_subnets
+  igw_id        = module.vpc.igw_id
+  subnet_cidrs  = var.public_subnets
   azs           = var.azs
 }
