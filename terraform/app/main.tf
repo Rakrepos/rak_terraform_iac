@@ -11,9 +11,9 @@ terraform {
 
 ###VPC AND SUBNETS MODULES##
 
-provider "aws" {
-  region = var.region
-}
+# provider "aws" {
+#   region = var.region
+# }
 
 module "vpc" {
   source   = "./modules/vpc"
